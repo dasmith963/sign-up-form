@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'norse-bold';
+  src: url(../fonts/norse-bold.otf);
+}
+
+:root{
+  --primary-bg-color: #f9fafb;
+  --text-color: #1f2937;
+  --input-border: #E5E7EB;
+  --input-focus: #c3cff0;
+  --input-error: #e6aeae;
+  --white: #ffffff;
+  --green: #596D48;
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--primary-bg-color);
+  color: var(--text-color);
+  font-family: var(--system-ui);
+  min-height: 100vh;
+}
+
+a{
+  color: inherit;
+}
+
+input,
+button{
+  font: inherit;
+}
+
+input,
+label{
+  display: block;
+}
+
+/* Reset base styling rules. */
