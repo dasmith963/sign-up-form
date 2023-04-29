@@ -81,7 +81,7 @@ label{
 .main-content{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: 16px;
 }
 
@@ -191,6 +191,7 @@ form h3{
 @media only screen and (min-width: 768px){
   main{
     display: flex;
+    align-items: center;
   }
 
   .sidebar{
@@ -210,5 +211,33 @@ form h3{
     left: 0;
     right: 0;
     text-align: center;
+  }
+
+  .main-content  *{
+    text-align: left;
+  }
+
+  .content-header{
+    line-height: 1.9rem;
+    width: clamp(400px, 100%, 800px);
+  }
+
+  .content-header h2{
+    padding: 0;
+  }
+
+  .content-header h2:last-of-type{
+    padding: 16px 0 32px;
+  }
+
+  form h3,
+  form .form-inputs,
+  form .form-btn{
+    padding-left: 48px;
+  }
+
+  .form-inputs{
+    justify-content: flex-start;
+    gap: 100px;
   }
 }
