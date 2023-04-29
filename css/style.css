@@ -93,3 +93,60 @@ label{
 .content-header h2{
   padding: 8px;
 }
+
+.content-header h2:last-of-type{
+  padding-bottom: 16px;
+}
+
+.content-header span{
+  font-style: italic;
+}
+
+form > :not(:last-child){
+  background: var(--white);
+  box-shadow: 0px 6px 8px -3px rgba(0,0,0,0.75);
+}
+
+form{
+  width: 100%;
+}
+
+form h3{
+  text-align: center;
+  padding: 16px 0 8px;
+  font-size: 1.5rem;
+}
+
+.form-inputs{
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  gap: 64px;
+}
+
+.form-group label{
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  font-weight: 600;
+}
+
+.form-group input{
+  outline: none;
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+}
+
+.form-group input:focus{
+  border: 2px solid var(--input-focus);
+  box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.3);
+  transition: .5s;
+}
+
+.form-group input:invalid{
+  border: 2px solid var(--input-error);
+  box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.3);
+  transition: .5s;
+}
