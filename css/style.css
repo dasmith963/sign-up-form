@@ -3,9 +3,10 @@
   src: url(../fonts/norse-bold.otf);
 }
 
-:root{
+:root {
   --primary-bg-color: #f9fafb;
   --text-color: #1f2937;
+  --error-text: #FF3131;
   --input-border: #E5E7EB;
   --input-focus: #c3cff0;
   --input-error: #e6aeae;
@@ -14,42 +15,42 @@
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background: var(--primary-bg-color);
   color: var(--text-color);
   font-family: var(--system-ui);
   min-height: 100vh;
 }
 
-a{
+a {
   color: inherit;
 }
 
 input,
-button{
+button {
   font: inherit;
 }
 
 input,
-label{
+label {
   display: block;
 }
 
-.sidebar{
+.sidebar {
   background: url(../img/leaf.jpg) center;
   height: 175px;
   color: var(--white);
   position: relative;
 }
 
-.logo-wrapper{
-  background:rgba(0, 0, 0, 0.502);
+.logo-wrapper {
+  background: rgba(0, 0, 0, 0.502);
   width: 100%;
   height: 100%;
   display: flex;
@@ -58,104 +59,117 @@ label{
   position: absolute;
 }
 
-.logo-wrapper img{
+.logo-wrapper img {
   display: block;
   max-width: 100%;
   width: 5em;
   height: auto;
 }
 
-.logo-wrapper h1{
+.logo-wrapper h1 {
   font-family: 'norse-bold';
   font-size: 6rem;
   margin-top: 20px;
 }
 
-.sidebar-footer{
+.sidebar-footer {
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 8px;
 }
 
-.main-content{
+.main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 16px;
 }
 
-.content-header{
+.content-header {
   text-align: center;
   padding: 0 48px;
 }
 
-.content-header h2{
+.content-header h2 {
   padding: 8px;
 }
 
-.content-header h2:last-of-type{
+.content-header h2:last-of-type {
   padding-bottom: 16px;
 }
 
-.content-header span{
+.content-header span {
   font-style: italic;
 }
 
-form > :not(:last-child){
+form> :not(:last-child) {
   background: var(--white);
-  box-shadow: 0px 6px 8px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
 }
 
-form{
+form {
   width: 100%;
 }
 
-form h3{
+form h3 {
   text-align: center;
   padding: 16px 0 8px;
   font-size: 1.5rem;
 }
 
-.form-inputs{
+.form-inputs {
   display: flex;
   justify-content: center;
   padding: 16px;
   gap: 64px;
 }
 
-.form-group label{
+.form-group {
+  position: relative;
+}
+
+.form-group label {
   font-size: .9rem;
   letter-spacing: .1rem;
   font-weight: 600;
 }
 
-.form-group input{
+.form-group input {
   outline: none;
   width: 100%;
   padding: 5px 20px;
-  margin: 8px 0;
+  margin: 8px 0 20px;
   border: 3px solid var(--input-border);
   border-radius: 4px;
 }
 
-.form-group input:focus{
+.form-group input:focus {
   border: 3px solid var(--input-focus);
-  box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.3);
   transition: .5s;
 }
 
-.form-group input:invalid{
+.form-group input:invalid {
   border: 3px solid var(--input-error);
   box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.3);
   transition: .5s;
 }
 
-.form-btn{
+.error {
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  font-size: .8rem;
+  color: var(--error-text);
+  transition: .7s;
+}
+
+.form-btn {
   text-align: center;
 }
 
-.form-btn button{
+.form-btn button {
   background: var(--green);
   color: var(--white);
   padding: 10px 40px;
@@ -166,77 +180,77 @@ form h3{
   cursor: pointer;
 }
 
-.form-btn button:hover{
+.form-btn button:hover {
   background: var(--input-focus);
   transition: .3s;
 }
 
-.form-btn button:active{
+.form-btn button:active {
   background: var(--white);
   color: var(--text-color);
   transition: .2s;
 }
 
-.form-btn p{
+.form-btn p {
   padding-top: 16px;
   font-size: 1.2rem;
 }
 
-.form-btn a{
+.form-btn a {
   text-decoration: none;
   color: var(--green);
   font-weight: 600;
 }
 
-@media only screen and (min-width: 768px){
-  main{
+@media only screen and (min-width: 768px) {
+  main {
     display: flex;
     align-items: center;
   }
 
-  .sidebar{
+  .sidebar {
     width: 45em;
     min-height: 100vh;
     background-size: cover;
   }
 
-  .logo-wrapper{
+  .logo-wrapper {
     height: auto;
     top: 22%;
     padding: 8px;
   }
 
-  .sidebar-footer{
+  .sidebar-footer {
     padding: 16px;
     left: 0;
     right: 0;
     text-align: center;
   }
 
-  .main-content  *{
+  .main-content * {
     text-align: left;
   }
 
-  .content-header{
+  .content-header {
     line-height: 1.9rem;
     width: clamp(400px, 100%, 800px);
   }
 
-  .content-header h2{
+  .content-header h2 {
     padding: 0;
   }
 
-  .content-header h2:last-of-type{
+  .content-header h2:last-of-type {
     padding: 16px 0 32px;
   }
 
   form h3,
   form .form-inputs,
-  form .form-btn{
+  form .form-btn {
     padding-left: 48px;
   }
 
-  .form-inputs{
+  .form-inputs {
     justify-content: flex-start;
     gap: 100px;
   }
