@@ -133,13 +133,14 @@ form h3 {
   font-size: .9rem;
   letter-spacing: .1rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .form-group input {
   outline: none;
   width: 100%;
-  padding: 5px 20px;
-  margin: 8px 0 20px;
+  padding: 5px 8px;
+  margin: 8px 0 32px;
   border: 3px solid var(--input-border);
   border-radius: 4px;
 }
@@ -164,9 +165,10 @@ form.submit input:invalid{
   position: absolute;
   left: 0;
   bottom: -16px;
-  font-size: .8rem;
   color: var(--error-text);
-  transition: .7s;
+  width: 100%;
+  font-size: clamp(.2rem, 70%, .6rem);
+  white-space: nowrap;
 }
 
 .form-btn {
@@ -257,5 +259,15 @@ form.submit input:invalid{
   .form-inputs {
     justify-content: flex-start;
     gap: 100px;
+  }
+
+  .form-group input {
+    padding: 5px 20px;
+    margin: 8px 0 20px;
+  }
+
+  .error {
+    bottom: -16px;
+    font-size: .8rem;
   }
 }
