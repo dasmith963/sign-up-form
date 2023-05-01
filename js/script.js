@@ -77,7 +77,7 @@ function checkPhoneNumber() {
     phoneError.textContent = '*Please enter your phone number';
   } else if (!phone.value.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/)) {
     phone.setCustomValidity('Please enter a valid number');
-    phoneError.textContent = '*Format: (123) 456-7890';
+    phoneError.textContent = '*Please enter a 10 digit number';
   } else {
     phone.setCustomValidity('');
     phoneError.textContent = '';
