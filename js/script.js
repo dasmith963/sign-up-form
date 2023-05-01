@@ -85,11 +85,13 @@ function checkPhoneNumber() {
 }
 
 function checkPassword() {
-  if (password.value !== '' && confirmPassword.value === '') {
+  if (password.value === confirmPassword.value) {
     passwordError.textContent = '';
-  } else if (password.value !== confirmPassword.value) {
-    passwordError.textContent = '*Passwords do not match';
-  } else if (password.value === '' || confirmPassword === '') {
+  }
+  if (password.value === '' && confirmPassword.value === '') {
     passwordError.textContent = '*Please enter a password';
+  } 
+  if (password.value !== confirmPassword.value){
+    passwordError.textContent = '*Passwords do not match';
   }
 }
