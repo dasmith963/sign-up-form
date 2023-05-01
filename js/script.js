@@ -86,12 +86,16 @@ function checkPhoneNumber() {
 
 function checkPassword() {
   if (password.value === confirmPassword.value) {
+    password.setCustomValidity('');
+    confirmPassword.setCustomValidity('');
     passwordError.textContent = '';
   }
   if (password.value === '' && confirmPassword.value === '') {
     passwordError.textContent = '*Please enter a password';
   } 
   if (password.value !== confirmPassword.value){
+    password.setCustomValidity('Please check your password');
+    confirmPassword.setCustomValidity('Please check your password');
     passwordError.textContent = '*Passwords do not match';
   }
 }
