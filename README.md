@@ -12,13 +12,15 @@ The goal of this project was to create a user-friendly and visually appealing fo
 
 ### Links
 
-- Live Site URL: (https://dasmith963.github.io/sign-up-form/)
+- [Live Site](https://dasmith963.github.io/sign-up-form/)
 
 ## Acknowledgments
 
-- Design file: (https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/sign-up-form.png)
-- Sidebar photo by Halie West (https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
-- Photo found on Unsplash (https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- [Design File](https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/sign-up-form.png)
+
+- [Photo by Halie West](https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+- [Unsplash](https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 
 
