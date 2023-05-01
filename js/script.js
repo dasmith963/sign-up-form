@@ -71,13 +71,15 @@ function checkEmail() {
     emailError.textContent = '';
   }
 }
+
 function checkPhoneNumber() {
-  const validNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   if (phone.validity.valueMissing) {
     phoneError.textContent = '*Please enter your phone number';
-  } else if (!phone.value.match(validNumber)) {
+  } else if (!phone.value.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/)) {
+    phone.setCustomValidity('Please enter a valid number');
     phoneError.textContent = '*Format: (123) 456-7890';
   } else {
+    phone.setCustomValidity('');
     phoneError.textContent = '';
   }
 }
